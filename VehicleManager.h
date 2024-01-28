@@ -2,34 +2,20 @@
 #define VEHICLE_MANAGER_H
 
 #include <iostream>
+#include <string>
 
 class VehicleManager {
 private:
-    // Private constructor to prevent instantiation
-    VehicleManager() {}
+    VehicleManager() {} // Private constructor
 
-    // Private instance of the class
-    static VehicleManager* instance;
+    static VehicleManager* instance; // Private instance of the class
 
 public:
-    // Public method to access the instance
-    static VehicleManager* getInstance() {
-        if (!instance) {
-            instance = new VehicleManager();
-        }
-        return instance;
-    }
+    static VehicleManager* getInstance(); // Public method to access the instance
 
     // Other methods for managing vehicles can be added here
-
-    void addVehicle(const std::string& vehicleName) {
-        std::cout << "Added vehicle: " << vehicleName << std::endl;
-    }
-
-    // Example method
-    void printVehicleCount() {
-        std::cout << "Total number of vehicles: 5" << std::endl;
-    }
+    void addVehicle(const std::string& vehicleName);
+    void printVehicleCount();
 };
 
 #endif // VEHICLE_MANAGER_H

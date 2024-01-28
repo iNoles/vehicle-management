@@ -1,8 +1,5 @@
 #include "VehicleManager.h"
 
-// Initialize the static instance to nullptr
-VehicleManager* VehicleManager::instance = nullptr;
-
 int main() {
     // Access the singleton instance
     VehicleManager* manager = VehicleManager::getInstance();
