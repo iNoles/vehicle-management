@@ -22,10 +22,10 @@ g++ main.cpp VehicleManager.cpp -o vehicle_manager
 ./vehicle_manager
 ```
 
-### Usage
+## Usage
 
 The main.cpp file demonstrates how to use the VehicleManager singleton to add vehicles and print the total number of vehicles.
 
-### Contributing
+## Contributing
 
 Feel free to contribute by opening issues or pull requests. Follow the coding standards specified in the project.
