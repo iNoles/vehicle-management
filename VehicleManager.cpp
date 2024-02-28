@@ -13,6 +13,6 @@ void VehicleManager::addVehicle(const std::string& vehicleName) {
     std::cout << "Added vehicle: " << vehicleName << std::endl;
 }
 
-void VehicleManager::printVehicleCount() {
-    std::cout << "Total number of vehicles: 5" << std::endl;
+void VehicleManager::printVehicleCount(int num_vehicle) {
+    std::cout << "Total number of vehicles: " << num_vehicle << std::endl;
 }

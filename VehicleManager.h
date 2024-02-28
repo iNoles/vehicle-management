@@ -15,7 +15,7 @@ public:
 
     // Other methods for managing vehicles can be added here
     void addVehicle(const std::string& vehicleName);
-    void printVehicleCount();
+    void printVehicleCount(int num_vehicle);
 };
 
 #endif // VEHICLE_MANAGER_H
