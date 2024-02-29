@@ -5,11 +5,11 @@ int main() {
     VehicleManager* manager = VehicleManager::getInstance();
 
     // Initialize array of pointer
-    const char* vehicles[4] = { "Car", "Motorcycle", "Boat", "Trucks" };
+    const char* vehicles[5] = { "Car", "Motorcycle", "Boat", "Trucks", "Bike" };
     const int num_vehicles = sizeof(vehicles) / sizeof(vehicles[0]);
 
     // Use the singleton to manage vehicles
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < num_vehicles; i++)
       manager->addVehicle(vehicles[i]);
 
     // Example: print the total number of vehicles
