@@ -1,6 +1,11 @@
 # Vehicle Management System
 
-This C++ project demonstrates a singleton pattern for managing vehicles.
+This is a simple vehicle management system written in C++. It allows you to manage different types of vehicles using a singleton `VehicleManager` class.
+
+## Features
+
+- Add vehicles to the system
+- Print the total number of vehicles
 
 ## Getting Started
 
