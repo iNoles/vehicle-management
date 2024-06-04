@@ -11,7 +11,7 @@ This is a simple vehicle management system written in C++. It allows you to mana
 
 ### Prerequisites
 
-C++ compiler
+- [C++ Compiler](https://gcc.gnu.org/) installed on your system
 
 ### Installation
 
