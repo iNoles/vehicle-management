@@ -1,19 +1,20 @@
 #include "VehicleManager.h"
 
 int main() {
-    // Access the singleton instance
     VehicleManager* manager = VehicleManager::getInstance();
 
-    // Initialize array of pointer
-    const char* vehicles[5] = { "Car", "Motorcycle", "Boat", "Trucks", "Bike" };
-    const int num_vehicles = sizeof(vehicles) / sizeof(vehicles[0]);
+    // Add vehicles with more details
+    manager->addVehicle("Car", "Sedan");
+    manager->addVehicle("Motorcycle", "Sport");
+    manager->addVehicle("Boat", "Yacht");
+    manager->addVehicle("Truck", "Pickup");
+    manager->addVehicle("Bike", "Mountain");
 
-    // Use the singleton to manage vehicles
-    for (int i = 0; i < num_vehicles; i++)
-      manager->addVehicle(vehicles[i]);
+    // List all vehicles
+    manager->listVehicles();
 
-    // Example: print the total number of vehicles
-    manager->printVehicleCount(num_vehicles);
+    // Print the total number of vehicles
+    manager->printVehicleCount();
 
     return 0;
 }
