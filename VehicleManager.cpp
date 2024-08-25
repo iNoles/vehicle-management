@@ -1,6 +1,6 @@
 #include "VehicleManager.h"
 
-VehicleManager* VehicleManager::instance = nullptr; // Initialize the static instance to nullptr
+VehicleManager* VehicleManager::instance = nullptr;
 
 VehicleManager* VehicleManager::getInstance() {
     if (!instance) {
@@ -9,10 +9,18 @@ VehicleManager* VehicleManager::getInstance() {
     return instance;
 }
 
-void VehicleManager::addVehicle(const std::string& vehicleName) {
-    std::cout << "Added vehicle: " << vehicleName << std::endl;
+void VehicleManager::addVehicle(const std::string& name, const std::string& type) {
+    vehicles.push_back(std::make_shared<Vehicle>(name, type));
+    std::cout << "Added vehicle: " << name << " | Type: " << type << std::endl;
 }
 
-void VehicleManager::printVehicleCount(int num_vehicle) {
-    std::cout << "Total number of vehicles: " << num_vehicle << std::endl;
+void VehicleManager::listVehicles() const {
+    std::cout << "Listing all vehicles:" << std::endl;
+    for (const auto& vehicle : vehicles) {
+        vehicle->display();
+    }
+}
+
+void VehicleManager::printVehicleCount() const {
+    std::cout << "Total number of vehicles: " << vehicles.size() << std::endl;
 }
