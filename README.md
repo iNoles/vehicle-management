@@ -1,11 +1,12 @@
 # Vehicle Management System
 
-This is a simple vehicle management system written in C++. It allows you to manage different types of vehicles using a singleton `VehicleManager` class.
+This project is a simple implementation of a Singleton pattern to manage a collection of vehicles. It includes a `VehicleManager` class for centralized vehicle management and a `Vehicle` class that encapsulates individual vehicle properties like name and type.
 
 ## Features
 
-- Add vehicles to the system
-- Print the total number of vehicles
+- **Singleton Design Pattern**: The `VehicleManager` is implemented as a Singleton to ensure only one instance is managing the vehicles.
+- **Dynamic Vehicle Storage**: The vehicles are stored dynamically using `std::vector` and managed through `std::shared_ptr` to handle memory safely.
+- **Vehicle Details**: Each vehicle has properties such as name and type, which are encapsulated in a `Vehicle` class.
 
 ## Getting Started
 
