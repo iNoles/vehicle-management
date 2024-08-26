@@ -34,4 +34,4 @@ The main.cpp file demonstrates how to use the VehicleManager singleton to add ve
 
 ## Contributing
 
-Feel free to contribute by opening issues or pull requests. Follow the coding standards specified in the project.
+Contributions are welcome! You can contribute by opening issues or submitting pull requests. Please follow the project's coding standards when making contributions.
