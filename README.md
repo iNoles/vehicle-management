@@ -1,6 +1,6 @@
 # Vehicle Management System
 
-This project is a simple implementation of a Singleton pattern to manage a collection of vehicles. It includes a `VehicleManager` class for centralized vehicle management and a `Vehicle` class that encapsulates individual vehicle properties like name and type.
+This project implements a Singleton pattern to manage a collection of vehicles, using C++11 extensions for a clean and efficient design. It features a VehicleManager class for centralized management and a Vehicle class that encapsulates individual vehicle properties.
 
 ## Features
 
@@ -12,7 +12,7 @@ This project is a simple implementation of a Singleton pattern to manage a colle
 
 ### Prerequisites
 
-- [C++ Compiler](https://gcc.gnu.org/) installed on your system
+- A C++11 compatible compiler (e.g., GCC version 4.8 or later).
 
 ### Installation
 
@@ -24,7 +24,7 @@ git clone https://github.com/iNoles/vehicle-management.git
 2. Compile and run the program:
 ```bash
 cd vehicle-management
-g++ main.cpp VehicleManager.cpp -o vehicle_manager
+g++ -std=c++11 main.cpp VehicleManager.cpp -o vehicle_manager
 ./vehicle_manager
 ```
 
