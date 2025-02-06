@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <memory>
+#include <mutex> // For thread safety
 
 // Vehicle class to represent each vehicle
 class Vehicle {
@@ -23,8 +24,8 @@ public:
         return type;
     }
 
-    void display() const {
-        std::cout << "Vehicle: " << name << " | Type: " << type << std::endl;
+    std::string toString() const {
+        return "Vehicle: " + name + " | Type: " + type;
     }
 };
 
@@ -32,7 +33,8 @@ public:
 class VehicleManager {
 private:
     VehicleManager() {} // Private constructor
-    static VehicleManager* instance;
+    static std::unique_ptr<VehicleManager> instance;  // Use unique_ptr for automatic memory management
+    static std::mutex mutex;  // Mutex for thread safety
     std::vector<std::shared_ptr<Vehicle>> vehicles; // Dynamically store vehicles
 
 public:
@@ -41,6 +43,8 @@ public:
     void addVehicle(const std::string& name, const std::string& type);
     void listVehicles() const;
     void printVehicleCount() const;
+    // Check if a vehicle exists by name
+    bool checkIfVehicleExists(const std::string& name) const;
 };
 
 #endif // VEHICLE_MANAGER_H
