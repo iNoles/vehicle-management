@@ -32,6 +32,23 @@ g++ -std=c++11 main.cpp VehicleManager.cpp -o vehicle_manager
 
 The main.cpp file demonstrates how to use the VehicleManager singleton to add vehicles and print the total number of vehicles.
 
+## Sample Outputs
+
+```text
+Added vehicle: Car | Type: Sedan
+Added vehicle: Motorcycle | Type: Sport
+Added vehicle: Boat | Type: Yacht
+Added vehicle: Truck | Type: Pickup
+Added vehicle: Bike | Type: Mountain
+Listing all vehicles:
+Vehicle: Car | Type: Sedan
+Vehicle: Motorcycle | Type: Sport
+Vehicle: Boat | Type: Yacht
+Vehicle: Truck | Type: Pickup
+Vehicle: Bike | Type: Mountain
+Total number of vehicles: 5
+```
+
 ## Contributing
 
 Contributions are welcome! You can contribute by opening issues or submitting pull requests. Please follow the project's coding standards when making contributions.
